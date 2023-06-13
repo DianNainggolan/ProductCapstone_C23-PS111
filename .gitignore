@@ -1,0 +1,3 @@
+.vscode
+web/__pycache__
+web/database.db
