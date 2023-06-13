@@ -1,0 +1,12 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+    %}
+    <h1 align="center">Tell us about your feeling!</h1>
+    <form method="POST">
+      <textarea name="diary" id="diary" class="form-control"></textarea>
+      <br />
+      <div align="center">
+        <button type="submit" class="btn btn-primary">Add diary</button>
+      </div>
+    </form>
+    {% endblock %}
+    
