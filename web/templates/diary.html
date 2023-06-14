@@ -1,11 +1,16 @@
-{% extends "nav.html" %} {% block title %}Home{% endblock %} {% block content
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
     %}
     <h1 align="center">My Diary</h1>
     <ul class="list-group list-group-flush" id="diary">
       {% for diary in user.diary %}
       <li class="list-group-item">
-        {{ diary.data }}
-      </br>{{ diary.date }}
+        {{ diary.date }}
+      </br>{{ diary.data }}
+    </br><b>Hasil Prediksi:</b>
+    </br>Anxiety: {{ diary.Anxiety }}%
+  </br>Depresi: {{ diary.Depresi }}%
+</br>Lonely: {{ diary.Lonely }}%
+</br>Normal: {{ diary.Normal }}%
       </li>
       {% endfor %}
     </ul>
