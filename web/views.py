@@ -10,7 +10,6 @@ import pickle
 import requests
 import os
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'credentials.json'
-import pandas as pd
 from google.cloud import translate_v2 as translate
 
 import contractions
@@ -24,6 +23,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 #recommendation
 import pandas as pd
+import numpy as np
 
 views = Blueprint('views', __name__)
 
@@ -75,7 +75,7 @@ def download_credentials():
 new_model, tokenizer = load_model_tokenizer()
 
 
-@views.route('/', methods=['GET', 'POST'])
+@views.route('/home', methods=['GET', 'POST'])
 @login_required
 def home():
     if request.method == 'POST': 
@@ -147,9 +147,12 @@ def home():
             normal=predict[3]
 
             new_diary = Diary(data=diary, Anxiety=anxiety*100, Depresi=depresi*100, Lonely=lonely*100, Normal=normal*100, user_id=current_user.id)
-            
+            datapredict=np.array(predict)
+            predict_list=datapredict.tolist()
             db.session.add(new_diary) 
             db.session.commit()
             flash('Diary added!', category='success')
+            return {'status': 'success', 'diary': diary, 'hasil_predict': predict_list}
 
-    return render_template("home.html", user=current_user)
+
+    #return render_template("home.html", user=current_user)
