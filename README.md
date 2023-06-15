@@ -24,9 +24,6 @@ Classification with a Recurrent Neural Network that using pre-trained word vecto
 - String
 - Random
 
-## DATASETS
-
-
 ## HOW TO PREDICT
 The model can predict the user mental condition by inputing what user writing
 
