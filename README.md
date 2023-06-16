@@ -11,3 +11,4 @@
 | Aditya Akmal Azhari            |A295DSX2039 | Mobile Development | | [LinkedIn](https://www.linkedin.com/in/aditya-akmal-azhari-9260741b6/)|
 ## About This Project
 Health Diary is Android-Based Mobile App that can predict user mental condition (depression, lonely, and anxiety) and give a recommendation quote based user writing
+[test](https://www.linkedin.com/in/dian-margaretha-nainggolan-292099212?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BeRjNvvqJQNyx8uNvb5qBxA%3D%3D)
